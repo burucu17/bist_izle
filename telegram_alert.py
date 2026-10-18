@@ -10,8 +10,8 @@ import requests
 
 
 def _resolve_credentials(cfg: dict):
-    token = os.getenv("TELEGRAM_TOKEN") or cfg.get("telegram", {}).get("bot_token", "")
-    chat_id = os.getenv("CHAT_ID") or cfg.get("telegram", {}).get("chat_id", "")
+    token = os.getenv("TELEGRAM_BOT_TOKEN") or cfg.get("telegram", {}).get("bot_token", "")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID") or cfg.get("telegram", {}).get("chat_id", "")
     return token, chat_id
 
 
